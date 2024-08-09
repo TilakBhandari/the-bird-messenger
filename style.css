@@ -5,10 +5,11 @@
 }
 
 :root {
-  --primary-bg: #122324;
-  --secondary-bg: #545748;
-  --text: #f1e9e3;
-  --button-bg: #db9f75;
+  --primary-bg: #0f2c33;
+  --secondary-bg: #21616a;
+  --text: #533946;
+  --button-bg: #efa00f;
+  --blankfield: #e6d1b4;
 }
 /* Header part  */
 
