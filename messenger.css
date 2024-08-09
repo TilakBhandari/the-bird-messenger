@@ -10,6 +10,7 @@
   --text: #533946;
   --button-bg: #efa00f;
   --blankfield: #e6d1b4;
+  --transition1: all 500ms ease-in-out;
 }
 /* Header part  */
 
@@ -65,6 +66,7 @@ body {
   margin: auto;
   border-radius: 10px;
   padding: 1rem;
+  transition: all 1s ease-in;
 }
 
 .people {
@@ -84,6 +86,9 @@ body {
   border-radius: 5px;
   margin: 5px;
   background: var(--blankfield);
+}
+.people input:hover {
+  background: var(--button-bg);
 }
 
 .search-people {
@@ -119,6 +124,15 @@ body {
   font: 18px bold;
   padding: 10px;
   color: var(--blankfield);
+  transition: var(--transition1);
+}
+.current {
+  color: var(--button-bg);
+  border: 1px solid var(--button-bg);
+}
+.person:hover {
+  color: var(--button-bg);
+  border: 1px solid var(--button-bg);
 }
 
 .messenger .messagebox {
@@ -178,6 +192,11 @@ body {
 }
 .attachments i {
   transform: scale(1.3);
+  transition: all 400ms ease-in-out;
+}
+.attachments i:hover {
+  color: var(--button-bg);
+  transform: scale(1.6);
 }
 
 .messages {
