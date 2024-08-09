@@ -10,6 +10,8 @@
   --text: #533946;
   --button-bg: #efa00f;
   --blankfield: #e6d1b4;
+  --transition1: all 500ms ease-in-out;
+  --shadow: 0px 0px 4px 2px var(--blankfield);
 }
 /* Header part  */
 
@@ -38,8 +40,8 @@ body {
   font-size: 1.5rem;
 }
 .navbar-general .current {
-  border-bottom: 2px solid goldenrod;
-  color: goldenrod;
+  border-bottom: 2px solid var(--button-bg);
+  color: var(--button-bg);
 }
 
 .navbar-general ul {
@@ -50,7 +52,7 @@ body {
 
 .navbar-general a {
   text-decoration: none;
-  color: white;
+  color: var(--blankfield);
 }
 .navbar-general li {
   transition: all 100ms linear;
@@ -58,26 +60,27 @@ body {
 .navbar-general li:hover {
   transform: scale(1.1);
   cursor: pointer;
-  border-bottom: 2px solid goldenrod;
-  color: goldenrod;
+  border-bottom: 2px solid var(--button-bg);
+  color: var(--button-bg);
 }
 
 /* Toggle dark and light mode  container */
 
 .toggle-dark {
-  width: 5rem;
+  width: 4rem;
   height: 2rem;
-  background: white;
+  background: black;
   border-radius: 1rem;
   position: relative;
+  box-shadow: var(--shadow);
 }
 .toggle-dark .ball {
   display: flex;
-  width: 2.5rem;
+  width: 2.2rem;
   height: 1.5rem;
   border-radius: 1rem;
-  background: black;
-  border: 0.25rem white solid;
+  background: var(--blankfield);
+  border: 0.25rem black solid;
 }
 
 /* Body part  */
@@ -85,7 +88,10 @@ body {
   color: var(--text);
   padding-top: 3vh;
 }
-
+.login h2 {
+  font-size: 1.5rem;
+  color: var(--blankfield);
+}
 .container-login {
   width: 450px;
   margin: auto;
@@ -97,6 +103,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  box-shadow: var(--shadow);
 }
 .container-login hr {
   width: 300px;
@@ -109,6 +116,7 @@ form {
   align-items: center;
 }
 form input {
+  background: var(--blankfield);
   height: 2rem;
   width: 300px;
   border-radius: 0.4rem;
@@ -126,7 +134,7 @@ form button {
 }
 form button:hover {
   color: white;
-  background: goldenrod;
+  background: var(--button-bg);
   transform: scale(1.1);
 }
 
@@ -136,6 +144,9 @@ form button:hover {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+.extras p {
+  color: var(--blankfield);
 }
 .register-link {
   display: flex;
@@ -151,7 +162,7 @@ form button:hover {
 }
 .login .extras a:hover {
   transform: scale(1.1);
-  color: goldenrod;
+  color: var(--button-bg);
 }
 
 @media (width <550px) {

@@ -11,7 +11,9 @@
   --button-bg: #efa00f;
   --blankfield: #e6d1b4;
   --transition1: all 500ms ease-in-out;
+  --shadow: 0px 0px 4px 2px var(--blankfield);
 }
+
 /* Header part  */
 
 body {
@@ -61,12 +63,13 @@ body {
 .messenger {
   display: flex;
   background: var(--secondary-bg);
-  height: 75vh;
+  height: 70vh;
   width: 90%;
   margin: auto;
   border-radius: 10px;
   padding: 1rem;
   transition: all 1s ease-in;
+  box-shadow: var(--shadow);
 }
 
 .people {
@@ -79,12 +82,13 @@ body {
   border-radius: 10px 0 0 10px;
 }
 .people input {
-  height: 1.5rem;
+  height: 2rem;
   width: 90%;
   text-align: center;
   border: 0px;
   border-radius: 5px;
   margin: 5px;
+  margin-top: 10px;
   background: var(--blankfield);
 }
 .people input:hover {
@@ -138,14 +142,19 @@ body {
 .messenger .messagebox {
   height: 100%;
   border: 5px var(--text) solid;
-  width: 80%;
+  width: 60%;
+  flex-grow: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0 10px 10px 0;
 }
-
+/* Hidden Search Bar  */
+.messagebox .search-people {
+  display: none;
+}
 .sendbox {
   display: flex;
 
@@ -205,4 +214,147 @@ body {
   width: 95%;
   margin-top: 1rem;
   border-radius: 10px;
+}
+.menu {
+  width: 20%;
+  display: flex;
+  margin: 1rem;
+  justify-content: flex-end;
+  text-align: start;
+
+  gap: 10px;
+  font-size: 20px;
+  color: var(--blankfield);
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.menu i:hover,
+.menu li:hover,
+.menuitems li a:hover {
+  color: var(--button-bg);
+  cursor: pointer;
+}
+.menuitems a {
+  text-decoration: none;
+  color: red;
+}
+.menu a {
+  color: red;
+}
+
+.infobar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 16px;
+  background: var(--primary-bg);
+  border-radius: 10px 10px 0 0;
+}
+.infobar .info {
+  flex-grow: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.info .namenumber {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--blankfield);
+}
+.namenumber h2 {
+  font-size: 16px;
+  color: var(--blankfield);
+}
+.namenumber p {
+  font-size: 12px;
+}
+
+.callandcontrol {
+  display: flex;
+  gap: 1rem;
+  color: var(--blankfield);
+}
+.callandcontrol i:hover {
+  color: var(--button-bg);
+  cursor: pointer;
+}
+.info .image {
+  height: 2rem;
+  width: 2rem;
+  background: var(--blankfield);
+  border-radius: 50%;
+}
+
+.info .image:hover {
+  background-color: var(--button-bg);
+}
+.info:hover {
+  cursor: pointer;
+}
+.hamburger {
+  display: none;
+}
+@media (width<1000px) {
+  .people {
+    display: none;
+  }
+  .messagebox .search-people {
+    display: flex;
+    height: 2rem;
+    width: 95%;
+    justify-content: center;
+  }
+
+  .search-people input {
+    height: 2rem;
+    width: 90%;
+    text-align: center;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px;
+    margin-top: 1.5rem;
+    background: var(--blankfield);
+  }
+  .search-people input:hover {
+    background: var(--button-bg);
+  }
+
+  .search-people i {
+    align-self: center;
+    position: relative;
+    left: 3rem;
+    top: 8px;
+  }
+}
+
+@media (width<700px) {
+  .menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    margin: 0 10px;
+    width: auto;
+  }
+  .hamburger i {
+    color: var(--blankfield);
+  }
+  .sendbox {
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .sendbox input {
+    flex-shrink: 1;
+    margin: 0;
+    width: 20%;
+  }
 }
