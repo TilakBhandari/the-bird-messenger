@@ -40,24 +40,26 @@ body {
 .navbar-general {
   display: none;
 }
+
 /* Toggle dark and light mode  container */
 
 .toggle-dark {
-  display: none;
-  width: 5rem;
+  width: 4rem;
   height: 2rem;
-  background: white;
+  background: black;
   border-radius: 1rem;
   position: relative;
+  box-shadow: var(--shadow);
 }
 .toggle-dark .ball {
   display: flex;
-  width: 2.5rem;
+  width: 2.2rem;
   height: 1.5rem;
   border-radius: 1rem;
-  background: black;
-  border: 0.25rem white solid;
+  background: var(--blankfield);
+  border: 0.25rem black solid;
 }
+
 /* body  */
 
 .messenger {
