@@ -1,0 +1,127 @@
+* {
+  /* block-size: border-box; */
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-bg: #0f2c33;
+  --secondary-bg: #21616a;
+  --text: #533946;
+  --button-bg: #efa00f;
+  --blankfield: #e6d1b4;
+  --transition1: all 500ms ease-in-out;
+  --shadow: 0px 0px 4px 2px var(--blankfield);
+}
+
+/* Header part  */
+
+body {
+  font-family: monospace;
+  height: 100vh;
+  width: 100vw;
+  background: var(--primary-bg);
+}
+.header {
+  margin: auto;
+  width: 100vw;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar  */
+
+.navbar-general {
+  display: none;
+}
+
+/* Toggle dark and light mode  container */
+
+.toggle-dark {
+  width: 4rem;
+  height: 2rem;
+  background: black;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+.toggle-dark .ball {
+  display: flex;
+  width: 2.2rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  background: var(--blankfield);
+  border: 0.25rem black solid;
+}
+
+/* ---------------------Body----------- */
+/* Main Container  */
+.profile {
+  display: flex;
+  background: var(--secondary-bg);
+  height: 70vh;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 1s ease-in;
+  box-shadow: var(--shadow);
+  align-items: flex-start;
+}
+
+/* Upper portion of page, ehich contains photo and details */
+.profile > .upper {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+.upper .photo {
+  width: 40%;
+  justify-self: flex-start;
+}
+.photo > img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+  margin: 0;
+}
+.upper .details {
+  display: grid;
+  justify-content: start;
+  margin-left: 30px;
+  color: var(--blankfield);
+  margin: 5px 20px;
+  max-width: 50%;
+}
+.details h1 {
+  margin: 5px;
+  text-align: center;
+}
+.details .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+.details .number {
+  font-size: 16px;
+  font-weight: lighter;
+}
+.upper .details .gender {
+  font-size: 16px;
+  font-weight: lighter;
+  /* margin-left: 25%; */
+}
+.upper .details .bio {
+  font-size: 16px;
+  font-weight: lighter;
+  /* margin-left: 25%; */
+  text-align: center;
+}
